@@ -1,10 +1,8 @@
 import Body from '../../organisms/Body/Body';
-import Button from '../../atoms/Button/Button';
 import Header from '../../organisms/Header/Header';
-import Number from '../../atoms/Number/Number';
+import LogBox from '../../molecules/LogBox/LogBox';
 import React from 'react';
 import RootWrapper from '../../atoms/RootWrapper/RootWrapper';
-import Text from '../../atoms/Text/Text';
 import styled from 'styled-components';
 
 const CountTemplate = () => {
@@ -13,6 +11,7 @@ const CountTemplate = () => {
             <Container>
                 <Header />
                 <Body />
+                <LogBox />
             </Container>
         </RootWrapper>
     );

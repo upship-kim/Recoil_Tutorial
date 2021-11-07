@@ -1,16 +1,19 @@
+import { useRecoilState, useRecoilValue } from 'recoil';
+
 import Button from '../../atoms/Button/Button';
 import React from 'react';
 import { countAtom } from '../../../utils/recoilState';
+import { logHistorySelector } from '../../../utils/logHistory';
 import styled from 'styled-components';
-import { useRecoilState } from 'recoil';
 
 const ControllBox = () => {
-    const [count, setCount] = useRecoilState(countAtom);
+    const count = useRecoilValue(countAtom);
+    const [countSelect, setCountSelect] = useRecoilState(logHistorySelector);
     const onIncrese = () => {
-        setCount(() => count + 1);
+        setCountSelect(() => count + 1);
     };
     const onDecrese = () => {
-        setCount(() => count - 1);
+        setCountSelect(() => count - 1);
     };
     return (
         <Container>
