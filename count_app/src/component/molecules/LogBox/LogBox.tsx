@@ -17,7 +17,7 @@ const LogList = ({ data, defaultValue }: LogListArgs) => {
     return (
         <ul>
             {data.map((row: RowItemArg, index: number) => (
-                <RowItem>
+                <RowItem key={index}>
                     <Text
                         text={
                             index === 0
@@ -38,7 +38,7 @@ const LogBox = () => {
     const [defaultValue, setDefaultValue] = useState<number>(count);
 
     useEffect(() => {
-        setHistory([...history, { text: value }]);
+        setHistory(history => [...history, { text: value }]);
     }, [value]);
 
     return (

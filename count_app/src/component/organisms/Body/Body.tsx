@@ -1,4 +1,4 @@
-import ControllBox from '../../molecules/ControllBox/ControllBox';
+import ControllBox from '../../molecules/ControllBox/ControlBox';
 import CountViewBox from '../../molecules/CountViewBox/CountViewBox';
 import React from 'react';
 import styled from 'styled-components';
